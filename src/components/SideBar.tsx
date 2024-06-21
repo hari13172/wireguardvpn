@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import TopBar from "./TopBar";
@@ -65,12 +65,18 @@ const SideBar: React.FC = () => {
   return (
     <div className="min-h-[100vh] overflow-x-hidden relative w-full">
       <div
-        className={`fixed h-full bg-blue-700 border-l-2 border-red-600 overflow-hidden transition-width duration-300`}
-        style={{ width: isExpanded ? '300px' : '80px' }}
+        className={`fixed h-full bg-blue-700 border-l-2 border-red-600 overflow-hidden transition-all duration-300`}
+        style={{ width: isExpanded ? "300px" : "85px" }}
       >
         <div className="flex items-center p-6 mb-10">
-          <FaApple className="text-[2rem] text-white mr-4" />
-          {isExpanded && <span className="text-white text-2xl font-bold">BrandLogo</span>}
+          <FaApple className="text-[2rem] text-white mr-4 flex-shrink-0" />
+          <span
+            className={`text-white text-2xl font-bold transition-opacity duration-300 ${
+              !isExpanded ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            BrandLogo
+          </span>
         </div>
         <ul className="ml-5 absolute left-0 w-full flex flex-col gap-5">
           {menuItems.map((item) => (
@@ -88,7 +94,9 @@ const SideBar: React.FC = () => {
                 <span className="relative block w-[40px] text-center leading-[60px]">
                   {item.icon}
                 </span>
-                {isExpanded && <span className="leading-[40px] ml-4">{item.name}</span>}
+                {isExpanded && (
+                  <span className="leading-[40px] ml-4">{item.name}</span>
+                )}
               </NavLink>
             </li>
           ))}

@@ -11,7 +11,7 @@ const TopBar: React.FC<TopBarProps> = ({ onMenuClick, isExpanded }) => {
   return (
     <div
       className="absolute min-h-[100vh] bg-white transition-all duration-300"
-      style={{ width: isExpanded ? '78%' : 'calc(100% - 80px)', left: isExpanded ? '300px' : '80px' }}
+      style={{ width: isExpanded ? '80%' : 'calc(100% - 80px)', left: isExpanded ? '300px' : '80px' }}
     >
       <div className="flex justify-between items-center p-4">
         <div className="w-[60px] h-[60px] relative flex justify-center items-center text-3xl cursor-pointer" onClick={onMenuClick}>
