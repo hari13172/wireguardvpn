@@ -1,11 +1,7 @@
-import React from 'react'
 
 function WireGuard() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div className="">
+  </div>;
 }
 
-export default WireGuard
+export default WireGuard;

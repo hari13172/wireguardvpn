@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaApple } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import TopBar from "./TopBar";
+import Card from "./Card";
+import WireGuard from "../pages/WireGuard";
 
 interface MenuItem {
   id: number;
@@ -63,9 +65,9 @@ const SideBar: React.FC = () => {
   };
 
   return (
-    <div className="min-h-[100vh] overflow-x-hidden relative w-full">
+    <div className="min-h-[100vh] flex overflow-x-hidden relative w-full bg-red-800  ">
       <div
-        className={`fixed h-full bg-blue-700 border-l-2 border-red-600 overflow-hidden transition-all duration-300`}
+        className={`fixed h-full bg-blue-700 overflow-hidden transition-all duration-300`}
         style={{ width: isExpanded ? "300px" : "85px" }}
       >
         <div className="flex items-center p-6 mb-10">
@@ -84,7 +86,7 @@ const SideBar: React.FC = () => {
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `flex items-center w-full p-4 relative a-hover transition-colors duration-300 ${
+                  `flex items-center w-full p-2 relative a-hover transition-colors duration-300 ${
                     isActive
                       ? "bg-white text-blue-700 rounded-tl-[30px] rounded-bl-[30px] active"
                       : "text-white"
@@ -102,7 +104,13 @@ const SideBar: React.FC = () => {
           ))}
         </ul>
       </div>
-      <TopBar onMenuClick={handleMenuClick} isExpanded={isExpanded} />
+      <div className="flex flex-col w-full ml-auto" style={{ marginLeft: isExpanded ? "300px" : "85px" }}>
+        <TopBar onMenuClick={handleMenuClick} isExpanded={isExpanded} />
+        <div className="p-28">
+          <Card />
+          {/* <WireGuard /> */}
+        </div>
+      </div>
     </div>
   );
 };

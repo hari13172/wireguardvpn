@@ -14,7 +14,7 @@ module.exports = {
       addUtilities({
         '.a-hover::before, .a-hover::after': {
           opacity: '0',
-          transition: 'opacity 0.3s, box-shadow 0.3s',
+          transition: 'opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
         },
         '.a-hover::before': {
           content: '""',
@@ -46,7 +46,7 @@ module.exports = {
           opacity: '1',
           boxShadow: '35px -35px 0 10px white',
         },
-      }, ['before', 'after', 'hover'])
+      }, ['before', 'after'])
     })
   ],
 }
