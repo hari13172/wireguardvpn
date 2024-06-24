@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import TopBar from "./TopBar";
 import Card from "./Card";
 import WireGuard from "../pages/WireGuard";
+import LineChart from "./LineChart";
 
 interface MenuItem {
   id: number;
@@ -104,11 +105,15 @@ const SideBar: React.FC = () => {
           ))}
         </ul>
       </div>
-      <div className="flex flex-col w-full ml-auto" style={{ marginLeft: isExpanded ? "300px" : "85px" }}>
+      <div
+        className="flex flex-col w-full ml-auto"
+        style={{ marginLeft: isExpanded ? "300px" : "85px" }}
+      >
         <TopBar onMenuClick={handleMenuClick} isExpanded={isExpanded} />
         <div className="p-28">
           <Card />
           {/* <WireGuard /> */}
+          {/* <LineChart /> */}
         </div>
       </div>
     </div>

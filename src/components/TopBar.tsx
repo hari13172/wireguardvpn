@@ -10,7 +10,7 @@ interface TopBarProps {
 const TopBar: React.FC<TopBarProps> = ({ onMenuClick, isExpanded }) => {
   return (
     <div
-      className="absolute min-h-[100vh] w-full bg-white transition-all duration-300"
+      className="absolute min-h-[100vh] w-full bg-white transition-all duration-300 bg-purple-700"
       style={{ width: isExpanded ? '80%' : 'calc(100% - 80px)', left: isExpanded ? '300px' : '80px' }}
     >
       <div className="flex justify-between items-center p-4">

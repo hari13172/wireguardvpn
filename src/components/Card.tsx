@@ -17,7 +17,7 @@ const cards: Card[] = [
 
 const CardGrid: React.FC = () => {
   return (
-    <div className="absolute left-[300px] p-4 w-[calc(100%-300px)]">
+    <div className="absolute left-[300px] p-4 w-[calc(100%-300px)] bg-white h-[calc(100vh-2vh)]">
       <div className="relative w-full grid lg:grid-cols-4 grid-cols-2 gap-8 items-center ">
         {cards.map((e, index) => (
           <div

@@ -1,5 +1,5 @@
 // tailwind.config.js
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: [
@@ -49,4 +49,4 @@ module.exports = {
       }, ['before', 'after'])
     })
   ],
-}
+};
